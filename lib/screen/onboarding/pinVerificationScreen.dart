@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pin_code_fields/pin_code_fields.dart';
 
 import '../../style/style.dart';
 
@@ -26,10 +27,22 @@ class _pinVerificationScreenState extends State<pinVerificationScreen> {
                 SizedBox(height: 1,),
                 Text("A 6 digit verification pin will send to your email address",style: Head6Text(colorLightGray),),
                 SizedBox(height: 20,),
+                PinCodeTextField(
+                    appContext: context,
+                    length: 6,
+                    pinTheme: AppOTPStyle(),
+                    animationType: AnimationType.fade,
+                    animationDuration: Duration(milliseconds: 300),
+                    onCompleted: (v){
+
+                    },
+                    onChanged: (value){
+
+                    }),
                 Container(
                   child: ElevatedButton(
                     style:AppButtonStyle(),
-                    child:  SuccessButtonChild('Login'),
+                    child:  SuccessButtonChild('verify'),
                     onPressed: () {},
                   ),
                 )

@@ -13,6 +13,23 @@ const colorDarkBlue=Color.fromRGBO(44, 62, 80,1.0);
 const colorLightGray=Color.fromRGBO(135, 142, 150, 1.0);
 const colorLight=Color.fromRGBO(211, 211, 211, 1.0);
 
+PinTheme AppOTPStyle(){
+  return PinTheme(
+      inactiveColor: colorLight,
+      inactiveFillColor: colorWhite,
+      selectedColor: colorGreen,
+      activeColor: colorWhite,
+      selectedFillColor: colorGreen,
+      shape: PinCodeFieldShape.box,
+      borderRadius: BorderRadius.circular(5),
+      fieldHeight: 50,
+      borderWidth: 0.5,
+      fieldWidth: 45,
+      activeFillColor: colorWhite
+
+  );
+}
+
 TextStyle Head1Text(textColor){
   return TextStyle(
     color: textColor,
@@ -123,19 +140,5 @@ void ErrorToast(msg){
   );
 }
 
-PinTheme AppOTPStyle(){
-  return PinTheme(
-    inactiveColor: colorLight,
-    inactiveFillColor: colorWhite,
-    selectedColor: colorGreen,
-    selectedFillColor: colorGreen,
-    shape: PinCodeFieldShape.box,
-    borderRadius: BorderRadius.circular(5),
-    fieldHeight: 50,
-    borderWidth: 0.5,
-    fieldWidth: 60,
-    activeFillColor: colorWhite
 
-  );
-}
 
